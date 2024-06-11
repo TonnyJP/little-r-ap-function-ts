@@ -29,8 +29,8 @@ export const RepositoriesList = () => {
             {loading && <h3>Loading...</h3>}
             {error && <h3>{error}</h3>}
             <div>
-                {!error && !loading && data.map((element) =>
-                    <li>{element}</li>)}
+                {!error && !loading && data.map((element, idx) =>
+                    <li key={idx}>{element}</li>)}
             </div>
         </form>
     </div>
